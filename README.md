@@ -26,11 +26,12 @@ Les dossiers intitulé Run1 servent à l'entrainement et au test et les dossier 
 Dans ces dossier il a plusieurs fichiers, des fichier intulé bigLabels contiennent les labels des transmetteurs pour chaque séquence des fichier bigMat. Pour chaque intitulé on retrouve l'ensemble d'entrainement et de test. 
 Dans les dossiers on trouve également l'information Preamble ou Payload dans le nom des fichiers permettant de savoir de quel scénario il s'agit.
 
-Ici nous proposons d'entrainer le réseau avec le mode préambule avec 2 tailles de bases de données 9000 signaux par transmetteurs et 45000 signaux par transmetteur et de tester ces performance grace au scenario 1 (le même qu'en entrainement) et le scenario 4 (ici run 5). Ce qui correspond 
-
+Ici nous proposons d'entrainer le réseau avec le mode préambule avec 2 tailles de bases de données 9000 signaux par transmetteurs et 45000 signaux par transmetteur et de tester ces performance grace au scenario 1 (le même qu'en entrainement) et le scenario 4 (ici run 5). Ce qui correspond aux case en rouges pour le scenario 1 et aux case en bleu pour le scenario 4. Ces resultats seront fournit sous forme d'un tableau de type DataFrame.
 
 ![Texte alternatif](Image/Img.png "Le titre de mon image")
 
+La même chose est proposé pour le mode Payload avec 9000 et 145000 signaux par emetteurs.
 
 
+![Texte alternatif](Image/Payload.png "Le titre de mon image")
 

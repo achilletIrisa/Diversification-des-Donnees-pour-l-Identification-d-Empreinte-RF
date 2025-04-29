@@ -28,7 +28,7 @@ using RiFyFi.Experiment_Database
 
 # ╔═╡ 9020bd9c-e75b-4369-b6f0-ef49168dfe22
 begin
-	Tab_3 = zeros(4,2)
+	Tab_3 = zeros(4,3)
 	Tab_3[:,1]= [10000,50000,10000,200000]
 	
 end
@@ -98,7 +98,9 @@ begin
 	
 	# Testing Dataset is created and saved in CSV files
 	#Experiment_Database.setExpcsv(Param_Data_test)
-	Tab_3[1,2]=Results.main(Param_Data,Param_Network,"Confusion_Matrix",savepathbson,Param_Data_test,Seed_Network)
+	Tab_3[1,2]=Results.main(Param_Data,Param_Network,"Confusion_Matrix",savepathbson,Param_Data,Seed_Network)
+
+	Tab_3[1,3]=Results.main(Param_Data,Param_Network,"Confusion_Matrix",savepathbson,Param_Data_test,Seed_Network)
 	
 end
 
@@ -121,8 +123,10 @@ RiFyFi.main(Param_Data,Param_Network)
 # Create a figure to show the evolution of the F1-score during the training 
 Param_Data_test=Experiment_Database.Data_Exp(;run="5",nbTx=5,nbSignals=NbSignals,Chunksize=Chunksize,Type_of_sig=Type_of_sig)
 
-Experiment_Database.setExpcsv(Param_Data_test)
-Tab_3[2,2]=Results.main(Param_Data,Param_Network,"Confusion_Matrix",savepathbson,Param_Data_test,Seed_Network)
+#Experiment_Database.setExpcsv(Param_Data_test)
+Tab_3[2,2]=Results.main(Param_Data,Param_Network,"Confusion_Matrix",savepathbson,Param_Data,Seed_Network)
+
+Tab_3[2,3]=Results.main(Param_Data,Param_Network,"Confusion_Matrix",savepathbson,Param_Data_test,Seed_Network)
 
 
 
@@ -146,9 +150,10 @@ RiFyFi.main(Param_Data,Param_Network)
 # Create a figure to show the evolution of the F1-score during the training 
 Param_Data_test=Experiment_Database.Data_Exp(;run="5",nbTx=5,nbSignals=NbSignals,Chunksize=Chunksize,Type_of_sig=Type_of_sig)
 
-Experiment_Database.setExpcsv(Param_Data_test)
-Tab_3[3,2]=Results.main(Param_Data,Param_Network,"Confusion_Matrix",savepathbson,Param_Data_test,Seed_Network)
+#Experiment_Database.setExpcsv(Param_Data_test)
+Tab_3[3,2]=Results.main(Param_Data,Param_Network,"Confusion_Matrix",savepathbson,Param_Data,Seed_Network)
 
+Tab_3[3,3]=Results.main(Param_Data,Param_Network,"Confusion_Matrix",savepathbson,Param_Data_test,Seed_Network)
 
 
 # ╔═╡ a1233a53-6b59-461a-affd-63635a0c9a0d
@@ -172,8 +177,10 @@ Param_Data_test=Experiment_Database.Data_Exp(;run="5",nbTx=5,nbSignals=NbSignals
 Experiment_Database.setExpcsv(Param_Data_test)
 
 
-Experiment_Database.setExpcsv(Param_Data_test)
-Tab_3[4,2]=Results.main(Param_Data,Param_Network,"Confusion_Matrix",savepathbson,Param_Data_test,Seed_Network)
+#Experiment_Database.setExpcsv(Param_Data_test)
+Tab_3[4,2]=Results.main(Param_Data,Param_Network,"Confusion_Matrix",savepathbson,Param_Data,Seed_Network)
+
+Tab_3[4,3]=Results.main(Param_Data,Param_Network,"Confusion_Matrix",savepathbson,Param_Data_test,Seed_Network)
 
 
 # ╔═╡ 3092e3a2-eb21-4d9a-8125-fe19021fd27e
@@ -181,10 +188,10 @@ Tab_3[4,2]=Results.main(Param_Data,Param_Network,"Confusion_Matrix",savepathbson
 Tab_3[:,1]=[9000,45000,9000,180000]
 
 
-Preambule=DataFrame(nbsig=Tab_3[1:2,1],Scenario_Preambule_4=Tab_3[1:2,2])
+Preambule=DataFrame(nbsig=Tab_3[1:2,1],Scenario_Preambule_1=Tab_3[1:2,2],Scenario_Preambule_4=Tab_3[1:2,3])
 
 
-Payload=DataFrame(nbsig=Tab_3[3:4,1],Scenario_Payload_4=Tab_3[3:4,2])
+Payload=DataFrame(nbsig=Tab_3[3:4,1],Scenario_Payload_1=Tab_3[3:4,2],Scenario_Payload_4=Tab_3[3:4,3])
 show(Preambule)
 
 
