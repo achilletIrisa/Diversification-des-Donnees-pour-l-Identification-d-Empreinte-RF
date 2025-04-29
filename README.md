@@ -29,7 +29,7 @@ Dans les dossiers on trouve également l'information Preamble ou Payload dans le
 Ici nous proposons d'entrainer le réseau avec le mode préambule avec 2 tailles de bases de données 9000 signaux par transmetteurs et 45000 signaux par transmetteur et de tester ces performance grace au scenario 1 (le même qu'en entrainement) et le scenario 4 (ici run 5). Ce qui correspond 
 
 
-![Texte alternatif](Image/img.png "Le titre de mon image")
+![Texte alternatif](Image/Img.png "Le titre de mon image")
 
 
 
