@@ -16,7 +16,8 @@ Pour obtenir la Figure 1, vous devrez :
 - Disposer de Julia 1.8 
 - Cloner ce projet git dans votre espace de travail. 
 - Se déplacer dans le Dossier "Diversification ..." qui a été créé, et lancer julia 
-```cd Diversification... 
+```
+cd Diversification... 
 julia 
 ```
 - Activer le package 
@@ -39,19 +40,40 @@ Celle-ci a été générée à partir de données réelles enregistré dans nos 
 Les dossiers intitulés Run1 servent à l'entrainement et au test et les dossiers Run5 servent seulement en test.
 Dans ces dossiers il a plusieurs fichiers, des fichiers intulés bigLabels contiennent les labels des transmetteurs, les fichier bigMat contiennent les sequences emises. Pour chaque intitulé on retrouve l'ensemble d'entrainement et de test. On trouve également l'information Preamble ou Payload dans le nom des fichiers permettant de savoir de quel mode il s'agit. 
 
-Ici nous proposons d'entrainer le réseau avec le mode préambule avec 2 tailles de bases de données 9000 signaux par transmetteurs et 45000 signaux par transmetteur et de tester ces performance grace au scenario 1 (le même qu'en entrainement) et le scenario 4 (ici run 5). Ce qui correspond aux case en rouges pour le scenario 1 et aux case en bleu pour le scenario 4. Ces resultats seront fournit sous forme d'un tableau de type DataFrame.
+Ici nous proposons d'entrainer le réseau avec le mode préambule avec 2 tailles de bases de données 9000 signaux par transmetteurs et 45000 signaux par transmetteur et de tester ces performance grace au scenario 1 (le même qu'en entrainement) et le scenario 4 (ici run 5). Ce qui correspond aux case en rouges pour le scenario 1 et aux case en bleu pour le scenario 4, sur la figure correspondant au papier ci-dessous. Ces resultats seront fournit sous forme d'un tableau de type DataFrame présenté ci-après.
 
-
-Sous la forme : 
-![Texte alternatif](Image/R_preambule.png "Le titre de mon image")
-
+Resultats dans le papier :
 <div align="center">
-  <img src="Image/Img.png" alt="Makie.jl" width="200">
+  <img src="Image/Img.png" alt="Makie.jl" width="300">
 </div>
+
+Forme obtenue ici :
+<div align="center">
+  <img src="Image/R_preambule.png" alt="Makie.jl" width="300">
+</div> 
+
+
 
 La même chose est proposé pour le mode Payload avec 9000 et 145000 signaux par emetteurs.
 
+<div align="center">
+  <img src="Image/Payload.png" alt="Makie.jl" width="300">
+</div>
 
-![Texte alternatif](Image/Payload.png "Le titre de mon image")
+Forme obtenue ici :
+<div align="center">
+  <img src="Image/R_payload.png" alt="Makie.jl" width="300">
+</div> 
 
-![Texte alternatif](Image/R_payload.png "Le titre de mon image")
+
+En supposant que vous ayez généré la Figure 1 avant les autres, vous devrez vous assurez d'avoir bien téléchargé les BDD réelles disponibles ICI et les enregister à la racine du dossiers "Diversification ...". ensuite vous pouvez lancer la commande dans un terminal julia 
+```
+julia> include("Fig3.jl")
+```
+
+A la fin de l'execution les deux tables correspondant à une partie de la table 3 seront affichées dans l'invite de commande et le script latex de la table 4 sera disponible dans Results/Exp/No_channel_5_256_AlexNet_Payload/RunTrain1_RunTest5_Test1_nothing/ 
+La table présentée dans l'article est celle correspondant à 200000 signaux (145000+50000).
+
+
+
+
