@@ -35,7 +35,11 @@ Après l'exécution, le script Latex de la Figure 1 se trouvera dans le dossier 
 ## Reproduire une partie de la Table 3 et Table 4
 
 Pour la Table 3, on propose de reproduire seulement une partie. 
-Celle-ci a été générée à partir de données réelles enregistré dans nos Labo. Ces données doivent être téléchargées ICI et mise à la racine du dossier "Diversification...", en conservant la hiérarchisation des dossiers.
+Celle-ci a été générée à partir de données réelles enregistré dans nos Labo. Ces données doivent être téléchargées grâce au script Load_CSV_File.sh à lancer grace à la commande : 
+```
+bash Load_CSV_File.sh 
+```
+à la racine du dossier "Diversification...". Ce script créé l'arboréscence des dossiers avec les fichier CSV qui contiennent les données pour le l'entrainement et le test.
 
 Les dossiers intitulés Run1 servent à l'entrainement et au test et les dossiers Run5 servent seulement en test.
 Dans ces dossiers il a plusieurs fichiers, des fichiers intitulés bigLabels contiennent les labels des transmetteurs, les fichier bigMat contiennent les séquences émises. Pour chaque intitulé on retrouve l'ensemble d'entrainement et de test. On trouve également l'information Préambule ou Payload dans le nom des fichiers permettant de savoir de quel mode il s'agit. 
