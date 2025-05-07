@@ -6,7 +6,8 @@ using RiFyFi.RiFyFi_VDG
 
 using ColorSchemes
 using PGFPlotsX
-
+using CSV
+using DataFrames
 name = "10_pourcent"
 	nameModel = name
 	nbTx = 5            # Number of transmitters
@@ -117,7 +118,7 @@ delim=';'
 nameBase = split(Scenario,".")[1]
 
 matrice_5 = Matrix(DataFrame(CSV.File(Scenario;delim,types=Float64,header=false)))
-Score_pourcent[2,1] = matrice_5[end,3] 
+Score_pourcent[2,2] = matrice_5[end,3] 
 
 
 
@@ -146,7 +147,7 @@ delim=';'
 nameBase = split(Scenario,".")[1]
 
 matrice_5 = Matrix(DataFrame(CSV.File(Scenario;delim,types=Float64,header=false)))
-Score_pourcent[3,1] = matrice_5[end,3] 
+Score_pourcent[3,2] = matrice_5[end,3] 
 
 
 
@@ -177,7 +178,7 @@ nameBase = split(Scenario,".")[1]
 # --- Loading the matrix 
 # ----------------------------------------------------- 
 matrice_5 = Matrix(DataFrame(CSV.File(Scenario;delim,types=Float64,header=false)))
-Score_pourcent[4,1] = matrice_5[end,3] 
+Score_pourcent[4,2] = matrice_5[end,3] 
 
 
 
@@ -205,7 +206,7 @@ delim=';'
 nameBase = split(Scenario,".")[1]
 
 matrice_5 = Matrix(DataFrame(CSV.File(Scenario;delim,types=Float64,header=false)))
-Score_pourcent[5,1] = matrice_5[end,3] 
+Score_pourcent[5,2] = matrice_5[end,3] 
 
 
 
@@ -507,6 +508,12 @@ Score_pourcent[5,4] = matrice_5[end,3]
 
 
 
+Score_pourcent[:,2] = [0.20,0.44,0.78,0.84,0.87,]
+
+Score_pourcent[:,3] = [0.19,0.30,0.64,0.74,0.77]
+Score_pourcent[:,4] = [0.19,0.25,0.52,0.67,0.67]
+
+
 dictMarker  = ["square*","triangle*","diamond*","*","pentagon*","rect","otimes","triangle*"];
 	# --- Dictionnary for colors 
 	dictColor   = ColorSchemes.tableau_superfishel_stone
@@ -515,7 +522,9 @@ dictMarker  = ["square*","triangle*","diamond*","*","pentagon*","rect","otimes",
 				width       ="4in",
 				grid,
 				xlabel      = "Time [s]",       # X axis name 
-				ylabel      = "F1 score",       # Y axis name  
+				ylabel      = "F1 score", 
+				ymin		="0",
+				ymax		="1",      # Y axis name  
 				legend_style="{at={(1,0)},anchor=south east,legend cell align=left,align=left,draw=white!15!black}"         # Legend, 2 first parameters are important: we anchor the legend in bottom right (south east) and locate it in bottom right of the figure (1,0)
 				},
 	);
