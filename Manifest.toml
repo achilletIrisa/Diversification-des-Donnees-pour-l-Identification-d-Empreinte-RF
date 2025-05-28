@@ -1521,7 +1521,7 @@ version = "1.3.1"
 
 [[deps.RiFyFi]]
 deps = ["Alert", "BSON", "CSV", "CUDA", "ColorSchemes", "Colors", "DSP", "DataFrames", "DelimitedFiles", "DigitalComm", "Distributed", "FFTW", "Flatten", "Flux", "Images", "Infiltrator", "InteractiveUtils", "Interpolations", "JSON", "LinearAlgebra", "Logging", "MAT", "OrderedCollections", "PGFPlotsX", "Pickle", "Plots", "Pluto", "Preferences", "PrettyTables", "ProgressMeter", "RCall", "RFImpairmentsModels", "Random", "Statistics", "cuDNN"]
-git-tree-sha1 = "0d22fe4f3be97b11a126e4ff3d38ce6527b86a49"
+git-tree-sha1 = "7961caffeb04a8e7bfae41782d575ac3f39919e2"
 repo-rev = "main"
 repo-url = "https://github.com/JuliaTelecom/Rifyfi.jl"
 uuid = "15fa5781-021b-46e5-a995-4fbf9d615b14"
