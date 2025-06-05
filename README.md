@@ -32,6 +32,12 @@ julia> include("Fig1.jl")
 Ensuite vous n'aurez plus qu'à attendre (assurez-vous d'avoir un GPU pour permettre de réduire le temps d'exécution qui est déjà assez long sur GPU, plusieurs dizaines d'heures)
 Après l'exécution, le script LaTeX de la Figure 1 se trouvera dans le dossier "run" créé automatiquement à la racine du dossier "Diversification...". Vous retrouverez également dans le dossier run les différents réseaux de neurones entraînés ainsi qu'un fichier comprenant les scores F1 sur la BDD d'entraînement et de test au cours de l'apprentissage (donc en fonction du temps).
 
+La Figure obtenue devrait ressembler à celle-ci, quelques variations de valeurs peuvent apparaitre.
+Résultats dans le papier :
+<div align="center">
+  <img src="Image/Fig1.png" alt="Makie.jl" width="300">
+</div>
+
 
 ## Reproduire une partie de la Table 3 et Table 4
 

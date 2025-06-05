@@ -29,7 +29,7 @@ dr = 0.5
 #λ = 0               # L2 regularizer param, implemented as weight decay
 batchsize = 64     # batch size
 epochs = 1000    # number of epochs
-#seed = 12           # set seed > 0 for reproducibility
+seed = 12           # set seed > 0 for reproducibility
 use_cuda = true     # if true use cuda (if available)
 
 

@@ -98,10 +98,6 @@ end
 
 ############################################################################################################################################
 
-# Score_pourcent[:,2] = [0.20,0.44,0.78,0.84,0.87,]
-# Score_pourcent[:,3] = [0.19,0.30,0.64,0.74,0.77]
-# Score_pourcent[:,4] = [0.19,0.25,0.52,0.67,0.67]
-
 dictMarker  = ["square*","triangle*","diamond*","*","pentagon*","rect","otimes","triangle*"];
 	
 # --- Dictionnary for colors 
@@ -110,10 +106,12 @@ dictColor   = ColorSchemes.tableau_superfishel_stone
 			height      ="3in",             # Size of Latex object, adapted to IEEE papers 
 			width       ="4in",
 			grid,
-			xlabel      = "Time [s]",       # X axis name 
-			ylabel      = "F1 score", 
+			xlabel      = "Nombre de canaux par Tx dans la BDD d'entrainement]",       # X axis name 
+			ylabel      = "Score F1 moyen sur 100 canaux en test.", 
 			ymin		="0",
-			ymax		="1",      # Y axis name  
+			ymax		="1.1",      # Y axis name  
+			xmax		= "200", 
+			ytick		="{0,0.25,0.5,0.75,1}",
 			legend_style="{at={(1,0)},anchor=south east,legend cell align=left,align=left,draw=white!15!black}"         # Legend, 2 first parameters are important: we anchor the legend in bottom right (south east) and locate it in bottom right of the figure (1,0)
 			},
 );
