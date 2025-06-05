@@ -29,7 +29,8 @@ pkg> activate .
 julia> include("Fig1.jl")
 ```
 
-Ensuite vous n'aurez plus qu'à attendre (assurez-vous d'avoir un GPU pour permettre de réduire le temps d'exécution qui est déjà assez long sur GPU, plusieurs dizaines d'heures)
+Ensuite vous n'aurez plus qu'à attendre (assurez-vous d'avoir un GPU pour permettre de réduire le temps d'exécution qui est déjà assez long sur GPU. Pour un GPU H100 il faut compter environ 125h pour générer la Figure 1.)
+
 Après l'exécution, le script LaTeX de la Figure 1 se trouvera dans le dossier "run" créé automatiquement à la racine du dossier "Diversification...". Vous retrouverez également dans le dossier run les différents réseaux de neurones entraînés ainsi qu'un fichier comprenant les scores F1 sur la BDD d'entraînement et de test au cours de l'apprentissage (donc en fonction du temps).
 
 La Figure obtenue devrait ressembler à celle-ci, quelques variations de valeurs peuvent apparaitre.
@@ -82,7 +83,7 @@ En supposant que vous ayez généré la Figure 1 avant les autres, vous devrez v
 ```
 julia> include("Fig3.jl")
 ```
-
+Pour un GPU H100 l'execution prend environ 1h.
 À la fin de l'exécution les deux tables correspondant à une partie de la table 3 seront affichées dans l'invite de commande et le script latex de la table 4 sera disponible dans Results/Exp/No_channel_5_256_AlexNet_Payload/RunTrain1_RunTest5_Test1_nothing/ 
 La table présentée dans l'article est celle correspondant à 200000 signaux (145000+50000).
 

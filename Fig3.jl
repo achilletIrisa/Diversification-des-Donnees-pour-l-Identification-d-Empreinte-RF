@@ -40,9 +40,6 @@ NbClass = nbRadioTx
 #Chunksize = 256
 #NbSignals = nbSignals
 Seed_Network = 11
-#Train_args =  Args()
-#model  = initAlexNet(256,4,Train_args.dr)[1]
-#loss = initAlexNet(256,4,Train_args.dr)[2]
 Train_args = RiFyFi_IdF.Args(η = η ,dr=dr, epochs= epochs,batchsize=batchsize,use_cuda=use_cuda)
 
 # ---------------------------------------------------------------------------------------------
@@ -75,7 +72,6 @@ for (i, NbSignals) in enumerate([10000,200000])
 	# Creation of the Network structure with the information of the network
 	Param_Network = Param_Network = RiFyFi_IdF.Network_struct(;Networkname,NbClass,Chunksize,NbSignals,Seed_Network,Train_args) 
 	# Train the network and save it 
-
 	RiFyFi.main(Param_Data,Param_Network)  
 	# Creation of the data structure with the information of the testin dataset - different scenario 
 	Param_Data_test = Experiment_Database.Data_Exp(;run="5",nbTx=5,nbSignals=NbSignals,Chunksize=Chunksize,Type_of_sig=Type_of_sig)
