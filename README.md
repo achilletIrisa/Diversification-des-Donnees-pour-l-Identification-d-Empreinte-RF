@@ -68,7 +68,7 @@ Forme obtenue ici :
 
 
 
-La même chose est proposée pour le mode Payload avec 9000 et 145000 signaux par émetteurs.
+La même chose est proposée pour le mode Payload avec 9000 et 180000 signaux par émetteurs.
 
 <div align="center">
   <img src="Image/Payload.png" alt="Makie.jl" width="300">
@@ -85,7 +85,7 @@ julia> include("Fig3.jl")
 ```
 Pour un GPU H100 l'execution prend environ 1h.
 À la fin de l'exécution les deux tables correspondant à une partie de la table 3 seront affichées dans l'invite de commande et le script latex de la table 4 sera disponible dans Results/Exp/No_channel_5_256_AlexNet_Payload/RunTrain1_RunTest5_Test1_nothing/ 
-La table présentée dans l'article est celle correspondant à 200000 signaux (145000+50000).
+La table présentée dans l'article est celle correspondant à 200000 signaux (180000+20000).
 
 
 
