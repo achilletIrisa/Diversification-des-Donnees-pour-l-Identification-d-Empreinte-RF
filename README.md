@@ -88,5 +88,7 @@ Pour un GPU H100 l'execution prend environ 1h.
 La table présentée dans l'article est celle correspondant à 200000 signaux (180000+20000).
 
 
-
-
+Le fichier .tex permet de créeer une Matrice de confusion proche de celle-ci (Tab4)
+<div align="center">
+  <img src="Image/Tab4.png" alt="Makie.jl" width="300">
+</div> 
